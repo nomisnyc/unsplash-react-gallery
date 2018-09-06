@@ -39,11 +39,11 @@ class Gallery extends Component {
 
     return(
       <GalleryWrap>
-        <div className="inner">
-          <h1 className="main-title">ImageSearch</h1>
+        <div>
+          <h1>ImageSearch</h1>
           <SearchForm onSearch={this.doSearch} />
         </div>
-        <div className="main-content">
+        <div>
           {this.state.loading
             ? <p>Loading</p>
             : <ImageList data={this.state.imgs} />}

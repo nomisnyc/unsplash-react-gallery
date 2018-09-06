@@ -23,7 +23,7 @@ const ImageList = props => {
 		imgs = <NoImages />;
 	}
 	return (
-		<ul className="img-list">
+		<ul>
 			{imgs}
 		</ul>
 	);
