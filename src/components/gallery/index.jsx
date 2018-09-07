@@ -7,7 +7,8 @@ import ImageList from '../imagelist'
 import SearchForm from '../searchform'
 
 const AccessKey = API.API_ACCESS_KEY
-
+{/* stateful component. api call is done during the lifecycle of componentDidMount to avoid any bugs with api call. the doSearch function is part of the initial component rendering and search function from search bar. this was done so no code is repeated. there is a state for loading progress, in case the api call is lagging the user will see a loading response. 
+*/}
 class Gallery extends Component {
   constructor(props) {
     super(props);
@@ -32,7 +33,6 @@ class Gallery extends Component {
       });
 
   }
-
 
   render(){
 

@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Image from '../image';
 import NoImages from '../noimage';
 
+{/* this grabs the response data, maps through the data and assign attributes to props. It also has a condition that decides between which component to use. If there is no images found then the no image component will be rendered.
+*/}
 
 const ImageList = props => {
 	const results = props.data;

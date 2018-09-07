@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+{/* stateless component since there are no functions. all the data from the api call is rendered here from props.
+*/}
 const Image = props =>
 	<Li>
 		<ImageItem>
