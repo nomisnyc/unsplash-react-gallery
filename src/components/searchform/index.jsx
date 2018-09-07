@@ -28,7 +28,7 @@ class SearchForm extends Component {
 						placeholder="Search..."
 					/>
 					<button type="submit" id="submit">
-						search
+						Go
 					</button>
 				</form>
 			</FormWrap>
@@ -39,5 +39,10 @@ class SearchForm extends Component {
 export default SearchForm
 
 const FormWrap = styled.div`
-	margin: 20px auto;
+	margin: 10px 8vw;
+	float: right;
+	button {
+		margin-left: 6px;
+	}
+
 `

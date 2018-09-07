@@ -26,7 +26,6 @@ class Gallery extends Component {
       .get('https://api.unsplash.com/search/photos/?page=1&per_page=10&query=' + query + '&client_id=' + AccessKey)
       .then(data => {
         this.setState({ imgs: data.data.results, loading: false });
-        console.log(data)
       })
       .catch(err => {
         console.log('Error happened during GET!', err);
@@ -39,10 +38,10 @@ class Gallery extends Component {
 
     return(
       <GalleryWrap>
-        <div>
-          <p>Search for Images</p>
+        <h2>Unsplash Image Search</h2>
+        <SearchBar>
           <SearchForm onSearch={this.doSearch} />
-        </div>
+        </SearchBar>
         <div>
           {this.state.loading
             ? <p>Loading</p>
@@ -57,4 +56,21 @@ export default Gallery;
 
 const GalleryWrap = styled.div`
   text-align: center;
+  padding: 20px;
+`;
+const SearchBar= styled.div`
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 102vw;
+  height: 50px;
+  padding: 4px;
+  margin-left: -30px;
+  margin-bottom: 40px;
+  background-color: hsla(208, 100%, 85%, 1.0);
+  @media (max-width: 460px) {
+    width: 103vw;
+  }
+
 `;

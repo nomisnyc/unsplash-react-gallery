@@ -7,16 +7,11 @@ import Gallery from '../components/gallery';
 class Root extends Component {
   render() {
     return(
-      <RootWrap>
+      <div>
         <Gallery />
-      </RootWrap>
+      </div>
     );
   }
 }
 
 export default Root;
-
-
-const RootWrap = styled.div`
-  padding: 1em;
-`;

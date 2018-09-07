@@ -6,6 +6,7 @@ const Image = props =>
 		<ImageItem>
 				<img src={props.url} alt={props.description} />
 		</ImageItem>
+		<div>
 		<a href={props.link} target="_blank">
 			<Overlay>
 				<Copy>
@@ -13,11 +14,12 @@ const Image = props =>
 		        <i> {props.description} </i>
 		      </span>
 		      <span>
-		        <a href={props.user} target="_blank">{props.name}</a> <br/>{props.location}
+		       {props.name} <br/>{props.location}
 		      </span>
 				</Copy>
 			</Overlay>
 		</a>
+		</div>
 	</Li>;
 
 export default Image;
@@ -36,6 +38,7 @@ const Overlay = styled.div`
   span {
     display: block;
     text-align: left;
+		margin: 4px auto;
   }
 `;
 
@@ -48,11 +51,18 @@ const Li = styled.div`
 	&:hover ${Overlay} {
 		opacity: .85;
 	}
+	&:hover ${ImageItem} {
+		-ms-transform: scale(1.03);
+		-webkit-transform: scale(1.03);
+		transform: scale(1.03);
+	}
 `;
 const ImageItem = styled.div`
 	display: block;
-	width: 100%;
-	height: auto;
+	transition: transform .2s;
+	img {
+		border-radius: 5%;
+	}
 `;
 
 const Copy = styled.div`
@@ -60,7 +70,7 @@ const Copy = styled.div`
 	font-size: 12px;
 	padding: 4px;
 	position: absolute;
-	background-color: #696969;
+	background-color: #0074D9;
 	border-radius: 5%;
 	width: 70%;
 	top: 50%;
@@ -71,4 +81,7 @@ const Copy = styled.div`
 		a{
 			color: #ffffff;
 		}
+	@media (max-width: 768px) {
+    width: 50%;
+  }
 `;

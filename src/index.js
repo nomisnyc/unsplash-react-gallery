@@ -30,7 +30,7 @@ injectGlobal`
   body {
     font-family: 'Arial';
     margin: 0;
-    color: #808080;
+    color: #0074D9;
   }
 
   *, *:before, *:after {
