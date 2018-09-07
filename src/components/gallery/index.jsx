@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
-import * as API from '../../cred.js';
+import * as API from '../../../cred.js';
 import ImageList from '../imagelist'
 import SearchForm from '../searchform'
 
@@ -21,7 +21,7 @@ class Gallery extends Component {
     this.doSearch();
   }
 
-  doSearch = (query = 'nature') => {
+  doSearch = (query = 'New York') => {
     axios
       .get('https://api.unsplash.com/search/photos/?page=1&per_page=10&query=' + query + '&client_id=' + AccessKey)
       .then(data => {
@@ -40,7 +40,7 @@ class Gallery extends Component {
     return(
       <GalleryWrap>
         <div>
-          <h1>ImageSearch</h1>
+          <p>Search for Images</p>
           <SearchForm onSearch={this.doSearch} />
         </div>
         <div>

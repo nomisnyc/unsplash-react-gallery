@@ -23,10 +23,18 @@ const ImageList = props => {
 		imgs = <NoImages />;
 	}
 	return (
-		<ul>
+		<Grid>
 			{imgs}
-		</ul>
+		</Grid>
 	);
 };
 
 export default ImageList;
+
+const Grid = styled.div`
+	-moz-column-width: 13em;
+	-webkit-column-width: 13em;
+	-moz-column-gap: 1em;
+	-webkit-column-gap: 1em;
+	display: inline-block;
+`;

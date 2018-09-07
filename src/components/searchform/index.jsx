@@ -18,21 +18,26 @@ class SearchForm extends Component {
 
 	render() {
 		return (
-			<form className="search-form" onSubmit={this.handleSubmit}>
-
-				<input
-					type="search"
-					onChange={this.onSearchChange}
-					ref={input => (this.query = input)}
-					name="search"
-					placeholder="Search..."
-				/>
-				<button type="submit" id="submit">
-					search
-				</button>
-			</form>
+			<FormWrap>
+				<form className="search-form" onSubmit={this.handleSubmit}>
+					<input
+						type="search"
+						onChange={this.onSearchChange}
+						ref={input => (this.query = input)}
+						name="search"
+						placeholder="Search..."
+					/>
+					<button type="submit" id="submit">
+						search
+					</button>
+				</form>
+			</FormWrap>
 		);
 	}
 }
 
 export default SearchForm
+
+const FormWrap = styled.div`
+	margin: 20px auto;
+`

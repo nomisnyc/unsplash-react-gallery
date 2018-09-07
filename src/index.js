@@ -5,11 +5,10 @@ import { injectGlobal } from 'styled-components';
 import Root from './pages/root';
 
 
-const title = 'Gallery';
+
 
 ReactDOM.render(
   <div>
-    {title}
     <Root />
   </div>,
   document.getElementById('app')
@@ -35,6 +34,6 @@ injectGlobal`
   }
 
   *, *:before, *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 `;
