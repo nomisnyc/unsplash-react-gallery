@@ -1,10 +1,12 @@
+// ** search form component
+
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
 
 {/* stateful component. there is a function here that changes the search query. when the user types, the response is automatically saved in state. the doSearch function is called when user does the search. preventDefault method is always called on submit to avoid page refresh.
 */}
-class SearchForm extends Component {
+export default class SearchForm extends Component {
 	state = {
 		text: ''
 	};
@@ -39,7 +41,7 @@ class SearchForm extends Component {
 	}
 }
 
-export default SearchForm
+
 
 const FormWrap = styled.div`
 	margin: 10px 8vw;

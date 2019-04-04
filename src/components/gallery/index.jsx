@@ -1,3 +1,5 @@
+// ** galler component -- parent container - wraps the image list and search function
+
 import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
@@ -24,7 +26,7 @@ class Gallery extends Component {
 
   doSearch = (query = 'New York') => {
     axios
-      .get('https://api.unsplash.com/search/photos/?page=1&per_page=16&query=' + query + '&client_id=' + AccessKey)
+      .get('https://api.unsplash.com/search/photos/?page=1&per_page=32&query=' + query + '&client_id=' + AccessKey)
       .then(data => {
         this.setState({ imgs: data.data.results, loading: false });
       })

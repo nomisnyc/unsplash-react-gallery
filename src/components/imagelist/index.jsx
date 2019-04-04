@@ -1,3 +1,5 @@
+// ** image list component -- container for images
+
 import React from 'react';
 import styled from 'styled-components';
 import Image from '../image';

@@ -1,3 +1,6 @@
+// ** image component -- individual images here
+
+
 import React from 'react';
 import styled from 'styled-components';
 

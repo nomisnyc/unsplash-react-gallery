@@ -1,3 +1,5 @@
+// ** main index.js page
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { injectGlobal } from 'styled-components';
